@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.19.8 - 2019-02-25T15:18:44.523Z
+ * Version: 0.19.8 - 2019-02-25T15:22:36.485Z
  * License: MIT
  */
 
@@ -2003,7 +2003,7 @@ uis.directive('uiSelectMultiple', ['uiSelectMinErr','$timeout', function(uiSelec
               items = items.slice(1,items.length);
               stashArr = stashArr.slice(1,stashArr.length);
             }
-            newItem = $select.search+' '+$select.taggingLabel;
+            newItem = ($select.search+' '+$select.taggingLabel).trim();
             if ( _findApproxDupe($select.selected, $select.search) > -1 ) {
               return;
             }
