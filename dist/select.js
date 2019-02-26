@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.19.6 - 2019-02-26T10:33:22.237Z
+ * Version: 0.19.6 - 2019-02-26T10:46:56.542Z
  * License: MIT
  */
 
@@ -1807,8 +1807,6 @@ uis.directive('uiSelectMultiple', ['uiSelectMinErr','$timeout', function(uiSelec
           var dupeIndex = -1;
           var tagItems;
           var tagItem;
-          var itemsIndex;
-          var stashIndex;
 
           // case for object tagging via transform `$select.tagging.fct` function
           if ( $select.tagging.fct !== undefined) {
