@@ -337,7 +337,10 @@ uis.directive('uiSelectMultiple', ['uiSelectMinErr','$timeout', function(uiSelec
           } else {
             // find any tagging items already in the $select.items array and store them
             tagItems = $select.$filter('filter')(items,function (item) {
-              return item.match($select.taggingLabel);
+              var match = item.match($select.taggingLabel);
+              if (match && match[0] !== "") {
+                return true;
+              }
             });
             if ( tagItems.length > 0 ) {
               tagItem = tagItems[0];
