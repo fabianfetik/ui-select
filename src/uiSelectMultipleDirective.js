@@ -422,7 +422,7 @@ uis.directive('uiSelectMultiple', ['uiSelectMinErr','$timeout', function(uiSelec
             // handle the simple string version of tagging
             if ( $select.tagging.fct === undefined ) {
               // search the array for the match
-              if ( tempArr[i]+' '+$select.taggingLabel === needle ) {
+              if ( (tempArr[i]+' '+$select.taggingLabel).trim() === needle ) {
               dupeIndex = i;
               }
             // handle the object tagging implementation
